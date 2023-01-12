@@ -1,0 +1,18 @@
+---
+import { Icon } from "astro-icon";
+
+interface Props {
+  href: string;
+  icon: string;
+}
+
+const { href, icon } = Astro.props;
+---
+
+<a
+  class="text-gray-400 hover:text-black transition-all"
+  href={href}
+  target="_blank"
+>
+  <Icon class="h-8" name={`simple-icons:${icon}`} />
+</a>
