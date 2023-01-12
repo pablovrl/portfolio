@@ -1,0 +1,12 @@
+---
+import IconLink from "./IconLink.astro";
+import { URLS } from "../data";
+---
+
+<footer class="bg-black w-full h-44 flex gap-2 justify-center items-center mt-20 flex-col">
+  <p class="text-white">Created by Pablo Villarroel :)</p>
+  <div class="flex gap-2">
+    <IconLink href={URLS.github} icon="github" color="white" size={4} />
+    <IconLink href={URLS.linkedin} icon="linkedin" color="white" size={4}/>
+  </div>
+</footer>
