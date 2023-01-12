@@ -4,15 +4,13 @@ import { Icon } from "astro-icon";
 interface Props {
   href: string;
   icon: string;
+  color?: string;
+  size?: number;
 }
 
-const { href, icon } = Astro.props;
+const { href, icon, color, size } = Astro.props;
 ---
 
-<a
-  class="text-black"
-  href={href}
-  target="_blank"
->
-  <Icon class="h-6" name={`simple-icons:${icon}`} />
+<a class="text-black" href={href} target="_blank">
+  <Icon class={`h-${size || '6'} text-${color}`} name={`simple-icons:${icon}`} />
 </a>
