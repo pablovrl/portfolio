@@ -8,26 +8,30 @@ import { URLS, PROJECTS } from "../data";
 ---
 
 <Layout title="Pablo Villarroel - Software Engineer">
-	<main class="max-w-5xl m-auto">
+	<main class="w-full px-4 md:max-w-5xl md:m-auto">
 		<Navbar />
 		<div class="flex flex-col gap-10 mt-10">
-			<div class="flex w-full justify-between">
-				<section class="flex gap-5 flex-col max-w-3xl">
+			<div class="flex flex-col md:flex-row w-full justify-between gap-10 md:gap-0">
+				<section class="flex gap-5 flex-col md:max-w-3xl">
 					<div class="flex">
-						<h1 class="text-6xl font-bold text-justify">
+						<h1 class="text-4xl md:text-6xl font-bold">
 							Software Engineer. Focused on web development.
 						</h1>
 					</div>
-					<p class="text-xl text-justify">
+					<p class="text-xl">
 						Hi, my name is Pablo Villarroel, I'am a software engineer based in
 						Concepción, Chile. I've been studying Compuer Science for 4 years at
 						the University of Bío-Bío. Actually I'm building projects with
 						TypeScript, Next.js, React, and Node.js.
 					</p>
-					<p class="text-xl text-justify">
+					<p class="text-xl">
 						I have experience developing with different technologies, such as
 						Docker, PHP, Java and C. As well with databases like MySQL,
 						PostgreSQL and MongoDB.
+					</p>
+					<p class="text-xl">
+						If you want to know more about me, you can download my CV or contact
+						me.
 					</p>
 					<div class="flex gap-3 items-center">
 						<a
@@ -49,7 +53,7 @@ import { URLS, PROJECTS } from "../data";
 				<h2 class="text-2xl font-semibold mb-5">
 					Some projects that I've created
 				</h2>
-				<div class="grid grid-cols-3 gap-4">
+				<div class="grid md:grid-cols-3 gap-4">
 					{
 						PROJECTS.map((project) => (
 							<Project
