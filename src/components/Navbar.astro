@@ -1,4 +1,7 @@
 ---
+import Icon from "astro-icon";
+import { MenuIcon } from "astro-navbar";
+
 const menuitems = [
   {
     title: "Home",
@@ -15,17 +18,46 @@ const menuitems = [
 ];
 ---
 
-<nav class="flex items-center py-6 gap-8 bg-white sticky top-0 overflow-hidden">
-  <a href="#" class="font-sans font-bold text-xl">PABLO VILLARROEL</a>
-  <ul class="flex gap-4">
-    {
-      menuitems.map((item) => (
-        <li>
-          <a href={item.path} class="text-lg font-bold py-2 px-4">
-            {item.title.toUpperCase()}
-          </a>
-        </li>
-      ))
-    }
-  </ul>
-</nav>
+<div class="fixed top-0 left-0 md:left-auto w-full px-4 md:sticky md:px-0">
+  <nav class="flex items-center py-6 gap-8 bg-white justify-between">
+    <a href="#" class="font-sans font-bold text-xl">PABLO VILLARROEL</a>
+    <ul class="md:flex gap-12 hidden">
+      {
+        menuitems.map((item) => (
+          <li>
+            <a href={item.path} class="text-lg font-bold py-2">
+              {item.title.toUpperCase()}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <div id="menu-button" class="md:hidden">
+      <MenuIcon />
+    </div>
+  </nav>
+  <div id="dropdown" class="bg-white hidden w-full">
+    <ul class="pb-4 flex flex-col gap-3">
+      {
+        menuitems.map((item) => (
+          <li>
+            <a href={item.path} class="text-lg font-bold py-2">
+              {item.title.toUpperCase()}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>
+
+<script>
+  function handleClick() {
+    const dropdown = document.getElementById("dropdown");
+    dropdown?.classList.toggle("hidden");
+  }
+
+  document
+    .getElementById("menu-button")
+    ?.addEventListener("click", handleClick);
+</script>
