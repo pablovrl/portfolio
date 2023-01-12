@@ -15,13 +15,13 @@ const menuitems = [
 ];
 ---
 
-<nav class="flex items-center py-6 gap-8 bg-white ">
+<nav class="flex items-center py-6 gap-8 bg-white sticky top-0">
   <a href="#" class="font-sans font-bold text-xl">PABLO VILLARROEL</a>
-  <ul class="flex gap-8">
+  <ul class="flex gap-4">
     {
       menuitems.map((item) => (
         <li>
-          <a href={item.path} class="text-lg font-bold">
+          <a href={item.path} class="text-lg font-bold py-2 px-4">
             {item.title.toUpperCase()}
           </a>
         </li>
