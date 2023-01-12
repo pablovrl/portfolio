@@ -1,8 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
-import { Icon } from "astro-icon";
 import IconLink from "../components/IconLink.astro";
+import Project from "../components/Project.astro";
 
 const URLS = {
 	cv: "https://docs.google.com/document/d/1xa9UIY9VXdLW8a-D5NGnUd-NSonwUVlNbnpOmSzTOt4/edit?usp=share_link",
@@ -10,6 +10,41 @@ const URLS = {
 	linkedin:
 		"https://www.linkedin.com/in/pablo-villarroel-antillanca-850974186/",
 };
+
+interface Project {
+	title: string;
+	image: string;
+	description: string;
+	codeUrl: string;
+	demoUrl?: string;
+}
+const PROJECTS: Project[] = [
+	{
+		title: "Mi Portafolio UBB",
+		image: "placeholder.png",
+		description:
+			"Website for the Computer Science students at the University of Bío-Bío. In which they can create and share a digital portfolio.",
+		codeUrl: "https://github.com/pablovrl/mi-portafolio-ubb",
+		demoUrl: undefined,
+	},
+	{
+		title: "Auth App",
+		image: "placeholder.png",
+		description:
+			"Web application created to learn how authentication (using cookies) and protected routes works.",
+		codeUrl: "https://github.com/pablovrl/auth-app",
+		demoUrl: undefined,
+	},
+
+	{
+		title: "Docmovi's technical test",
+		image: "placeholder.png",
+		description:
+			"Technical test to enter as an intern at Docmovi. Using a back-end and front-end framework called Meteor.",
+		codeUrl: "https://github.com/pablovrl/prueba-docmovi",
+		demoUrl: undefined,
+	},
+];
 ---
 
 <Layout title="Pablo Villarroel - Software Engineer">
@@ -36,7 +71,7 @@ const URLS = {
 					</p>
 					<div class="flex gap-3 items-center">
 						<a
-							class="border-grey-300 border-2 py-2 px-8 rounded-xl"
+							class="bg-black text-white max-h-8 px-4 rounded-lg transition-all duration-300"
 							target="_blank"
 							href={URLS.cv}
 						>
@@ -54,7 +89,23 @@ const URLS = {
 				<h2 class="text-2xl font-semibold mb-5">
 					Some projects that I've created
 				</h2>
+				<div class="grid grid-cols-3 gap-4">
+					{
+						PROJECTS.map((project) => (
+							<Project
+								title={project.title}
+								image={project.image}
+								description={project.description}
+								codeUrl={project.codeUrl}
+								demoUrl={project.demoUrl}
+							/>
+						))
+					}
+				</div>
 			</section>
 		</div>
 	</main>
+	<footer class="bg-black w-full h-44 flex justify-center items-center mt-20">
+		<p class="text-white">Created by Pablo Villarroel :)</p>
+	</footer>
 </Layout>
