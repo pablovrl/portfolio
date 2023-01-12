@@ -1,0 +1,60 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import { Icon } from "astro-icon";
+import IconLink from "../components/IconLink.astro";
+
+const URLS = {
+	cv: "https://docs.google.com/document/d/1xa9UIY9VXdLW8a-D5NGnUd-NSonwUVlNbnpOmSzTOt4/edit?usp=share_link",
+	github: "https://github.com/pablovrl",
+	linkedin:
+		"https://www.linkedin.com/in/pablo-villarroel-antillanca-850974186/",
+};
+---
+
+<Layout title="Pablo Villarroel - Software Engineer">
+	<main class="max-w-5xl m-auto">
+		<Navbar />
+		<div class="flex flex-col gap-10 mt-10">
+			<div class="flex w-full justify-between">
+				<section class="flex gap-5 flex-col max-w-3xl">
+					<div class="flex">
+						<h1 class="text-6xl font-bold text-justify">
+							Software Engineer. Focused on web development.
+						</h1>
+					</div>
+					<p class="text-xl text-justify">
+						Hi, my name is Pablo Villarroel, I'am a software engineer based in
+						Concepción, Chile. I've been studying Compuer Science for 4 years at
+						the University of Bío-Bío. Actually I'm building projects with
+						TypeScript, Next.js, React, and Node.js.
+					</p>
+					<p class="text-xl text-justify">
+						I have experience developing with different technologies, such as
+						Docker, PHP, Java and C. As well with databases like MySQL,
+						PostgreSQL and MongoDB.
+					</p>
+					<div class="flex gap-3 items-center">
+						<a
+							class="border-grey-300 border-2 py-2 px-8 rounded-xl"
+							target="_blank"
+							href={URLS.cv}
+						>
+							Download CV
+						</a>
+						<IconLink href={URLS.github} icon="github" />
+						<IconLink href={URLS.linkedin} icon="linkedin" />
+					</div>
+				</section>
+				<div class="flex items-center">
+					<img src="/profile.jpeg" width="200px" class="rounded-full" />
+				</div>
+			</div>
+			<section>
+				<h2 class="text-2xl font-semibold mb-5">
+					Some projects that I've created
+				</h2>
+			</section>
+		</div>
+	</main>
+</Layout>
