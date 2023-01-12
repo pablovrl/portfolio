@@ -1,0 +1,31 @@
+---
+const menuitems = [
+  {
+    title: "Home",
+    path: "#",
+  },
+  {
+    title: "Projects",
+    path: "#",
+  },
+  {
+    title: "Contact",
+    path: "#",
+  },
+];
+---
+
+<nav class="flex items-center py-6 gap-8 bg-white ">
+  <a href="#" class="font-sans font-bold text-xl">PABLO VILLARROEL</a>
+  <ul class="flex gap-8">
+    {
+      menuitems.map((item) => (
+        <li>
+          <a href={item.path} class="text-lg font-bold">
+            {item.title.toUpperCase()}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
