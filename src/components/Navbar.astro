@@ -1,6 +1,10 @@
 ---
-import Icon from "astro-icon";
 import { MenuIcon } from "astro-navbar";
+interface Props {
+  lang: "en" | "es";
+}
+
+const { lang } = Astro.props;
 
 const menuitems = [
   {
@@ -18,19 +22,21 @@ const menuitems = [
 ];
 ---
 
-<div class="fixed top-0 left-0 md:left-auto w-full px-4 md:sticky md:px-0">
-  <nav class="flex items-center py-6 gap-8 bg-white justify-between">
-    <a href="#" class="font-sans font-bold text-xl">PABLO VILLARROEL</a>
+<div class="top-0 w-full sticky px-0">
+  <nav class="flex items-center py-2 gap-8 bg-white justify-between">
+    <a href="/" class="font-sans font-bold text-xl">PABLO VILLARROEL</a>
     <ul class="md:flex gap-12 hidden">
       {
         menuitems.map((item) => (
-          <li>
-            <a href={item.path} class="text-lg font-bold py-2">
-              {item.title.toUpperCase()}
-            </a>
+          <li class="cursor-pointer text-lg font-bold py-2">
+            {item.title.toUpperCase()}
           </li>
         ))
       }
+      <select class="bg-white">
+        <option value="en" selected={lang === "en"}>EN 🇺🇸</option>
+        <option value="es" selected={lang === "es"}>ES 🇨🇱</option>
+      </select>
     </ul>
     <div id="menu-button" class="md:hidden">
       <MenuIcon />
@@ -40,13 +46,13 @@ const menuitems = [
     <ul class="pb-4 flex flex-col gap-3">
       {
         menuitems.map((item) => (
-          <li>
-            <a href={item.path} class="text-lg font-bold py-2">
-              {item.title.toUpperCase()}
-            </a>
-          </li>
+          <li class="text-lg font-bold py-2">{item.title.toUpperCase()}</li>
         ))
       }
+      <select>
+        <option value="en" selected={lang === "en"}>EN 🇺🇸</option>
+        <option value="es" selected={lang === "es"}>ES 🇨🇱</option>
+      </select>
     </ul>
   </div>
 </div>
@@ -60,4 +66,25 @@ const menuitems = [
   document
     .getElementById("menu-button")
     ?.addEventListener("click", handleClick);
+
+  function scrollToElement(element: string) {
+    const el = document.getElementById(element.trim());
+    el?.scrollIntoView({ behavior: "smooth" });
+  }
+
+  const menuItems = document.querySelectorAll("li");
+  menuItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      const element = item.textContent?.toLowerCase();
+      scrollToElement(element!);
+    });
+  });
+
+  const selects = document.querySelectorAll("select");
+  selects.forEach((select) => {
+    select?.addEventListener("change", (e) => {
+      const lang = (e.target as HTMLSelectElement).value;
+      window.location.replace(`/${lang}`);
+    });
+  });
 </script>
