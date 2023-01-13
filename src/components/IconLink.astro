@@ -5,12 +5,15 @@ interface Props {
   href: string;
   icon: string;
   color?: string;
-  size?: number;
+  size?: string;
 }
 
 const { href, icon, color, size } = Astro.props;
 ---
 
 <a class="text-black" href={href} target="_blank">
-  <Icon class={`h-${size || '6'} text-${color}`} name={`simple-icons:${icon}`} />
+  <Icon
+    class={`${size || "h-6"} text-${color}`}
+    name={`simple-icons:${icon}`}
+  />
 </a>
