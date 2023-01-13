@@ -11,28 +11,34 @@ const { title, image, codeUrl, demoUrl, description } = Astro.props;
 ---
 
 <div class="flex flex-col">
-  <img src={image} class="rounded-t-lg" />
-  <div class="border rounded-b-lg px-4 py-6 flex flex-col gap-2 justify-between h-full">
+  <div class="border-t border-l border-r rounded-t-lg">
+    <img src={image} class="rounded-t-lg" />
+  </div>
+  <div
+    class="border rounded-b-lg px-4 py-6 flex flex-col gap-4 justify-between h-full"
+  >
     <div>
-      <h2 class="text-2xl font-semibold">{title}</h2>
+      <h2 class="text-2xl font-semibold mb-1">{title}</h2>
       <p>
         {description}
       </p>
     </div>
     <div class="grid grid-cols-2 gap-2">
       <a
-        class="bg-black text-white p-2 rounded-lg text-center"
+        class="hover:-translate-y-1 hover:shadow-2xl transition-all bg-black text-white p-2 rounded-md text-center"
         target="_blank"
         href={codeUrl}
       >
         Code
       </a>
-      <button
-        disabled={!demoUrl}
-        class="border-2 border-black rounded-lg disabled:bg-gray-100 disabled:text-gray-300 disabled:border-gray-100"
-      >
-        <a target="_blank" href={demoUrl}>Demo</a>
-      </button>
+      <a target="_blank" class="" href={demoUrl}>
+        <button
+          disabled={!demoUrl}
+          class="hover:-translate-y-1 disabled:hover:translate-y-0 hover:shadow-2xl disabled:shadow-none transition-all h-full w-full border-2 border-black rounded-md disabled:bg-gray-100 disabled:text-gray-300 disabled:border-gray-100"
+        >
+          Demo
+        </button>
+      </a>
     </div>
   </div>
 </div>
