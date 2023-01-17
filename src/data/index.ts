@@ -43,7 +43,7 @@ export const PROJECTS: Project[] = [
       es: "Sitio web para los estudiantes de Ingeniería en Informática de la Universidad de Bío-Bío. En el cual pueden crear y compartir un portafolio digital."
     },
     codeUrl: "https://github.com/pablovrl/mi-portafolio-ubb",
-    demoUrl: "https://google.cl",
+    demoUrl: undefined,
   },
   {
     title: "Auth App",
