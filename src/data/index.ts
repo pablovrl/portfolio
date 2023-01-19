@@ -39,8 +39,8 @@ export const PROJECTS: Project[] = [
     title: "Mi Portafolio UBB",
     image: "mi-portafolio-ubb.png",
     description: {
-      en: "Website for the Computer Science students at the University of Bío-Bío. In which they can create and share a digital portfolio.",
-      es: "Sitio web para los estudiantes de Ingeniería en Informática de la Universidad de Bío-Bío. En el cual pueden crear y compartir un portafolio digital."
+      en: "Website for the Computer Science students at the University of Bío-Bío. In which they can create and share a digital portfolio. Also employers can search students by their skills and contact them.",
+      es: "Sitio web para los estudiantes de Ingeniería en Informática de la Universidad de Bío-Bío. En el cual pueden crear y compartir un portafolio digital. También los empleadores pueden buscar estudiantes por sus habilidades y contactarlos."
     },
     codeUrl: "https://github.com/pablovrl/mi-portafolio-ubb",
     demoUrl: undefined,
@@ -59,8 +59,8 @@ export const PROJECTS: Project[] = [
     title: "Pokemon Card",
     image: "pokemon-card.png",
     description: {
-      en: "Web application created to learn how to use the PokeAPI and tailwindcss. It shows a random pokemon card.",
-      es: "Aplicación web creada para aprender como usar la PokeAPI y tailwindcss. Muestra una carta de pokemon aleatoria."
+      en: "Web application created to learn how to use the PokeAPI and tailwindcss. It shows a random pokemon card. Also, you add cards to your favorites list.",
+      es: "Aplicación web creada para aprender como usar la PokeAPI y tailwindcss. Muestra una carta de pokemon aleatoria. Además, puedes agregar cartas a tu lista de favoritos."
     },
     codeUrl: "https://github.com/pablovrl/pokemon-card",
     demoUrl: "https://pokemon-card-ten.vercel.app/"
