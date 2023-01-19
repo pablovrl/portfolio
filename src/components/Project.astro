@@ -11,11 +11,11 @@ const { title, image, codeUrl, demoUrl, description } = Astro.props;
 ---
 
 <div class="flex flex-col">
-  <div class="border-t border-l border-r rounded-t-lg">
-    <img src={image} class="rounded-t-lg" />
+  <div class="max-h-80 border-t border-l border-r rounded-t-lg">
+    <img src={image} class="rounded-t-lg object-fill" />
   </div>
   <div
-    class="border rounded-b-lg px-4 py-6 flex flex-col gap-4 justify-between h-full"
+    class="bg-white border rounded-b-lg px-4 py-6 flex flex-col gap-4 justify-between h-full"
   >
     <div>
       <h2 class="text-2xl font-semibold mb-1">{title}</h2>
