@@ -67,7 +67,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "Docmovi's technical test",
-    image: "placeholder.png",
+    image: "docmovi.jpeg",
     description: {
       en: "Technical test to enter as an intern at Docmovi. Using a back-end and front-end framework called Meteor.",
       es: "Prueba técnica para entrar como interno en Docmovi. Usando un framework de back-end y front-end llamado Meteor."
