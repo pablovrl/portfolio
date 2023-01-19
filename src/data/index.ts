@@ -56,6 +56,16 @@ export const PROJECTS: Project[] = [
     demoUrl: undefined,
   },
   {
+    title: "Pokemon Card",
+    image: "pokemon-card.png",
+    description: {
+      en: "Web application created to learn how to use the PokeAPI and tailwindcss. It shows a random pokemon card.",
+      es: "Aplicación web creada para aprender como usar la PokeAPI y tailwindcss. Muestra una carta de pokemon aleatoria."
+    },
+    codeUrl: "https://github.com/pablovrl/pokemon-card",
+    demoUrl: "https://pokemon-card-ten.vercel.app/"
+  },
+  {
     title: "Docmovi's technical test",
     image: "placeholder.png",
     description: {
