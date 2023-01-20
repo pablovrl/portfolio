@@ -81,8 +81,7 @@ export const PAGECONTENT = {
   en: {
     title: "Software Engineer. Building web applications.",
     description: [
-      "Hi!, my name is Pablo Villarroel, I'am a software engineer based in Concepción, Chile. I've been studying Computer Science for 4 years at the University of Bío-Bío. Actually I'm building projects with TypeScript, Next.js, React, and Node.js.",
-      "I have experience developing with different technologies, such as Docker, PHP, Java and C. As well with databases like MySQL, PostgreSQL and MongoDB.",
+      "Hi, my name is Pablo Villarroel, I'am a software engineer based in Concepción, Chile. I started my career in 2019, and since then, I've learning web development in a self-taught way. I love challenges and I'm always looking for new opportunities to learn and improve my skills.",
       "If you want to know more about me, you can download my CV or contact me."
     ],
     cv: "Download CV",
@@ -93,8 +92,7 @@ export const PAGECONTENT = {
   es: {
     title: "Ingeniero Informático. Creando aplicaciones web.",
     description: [
-      "Hola!, mi nombre es Pablo Villarroel, soy Ingeniero en Informática y vivo en Concepción, Chile. Estudié por 4 años en la Universidad de Bío-Bío y actualmente estoy construyendo proyectos con TypeScript, Next.js, React y Node.js.",
-      "Tengo experiencia desarrollando con diferentes tecnologías, entre las cuales se encuentran Docker, PHP, Java and C. También he trabajado con bases de datos como MySQL, PostgreSQL y MongoDB.",
+      "Hola, mi nombre es Pablo Villarroel, soy Ingeniero en Informática y vivo en Concepción, Chile. Comencé mi carrera en 2019, y desde entonces, he estado aprendiendo desarrollo web de forma autodidacta. Me encantan los desafíos y siempre estoy buscando nuevas oportunidades para aprender y mejorar mis habilidades",
       "Si quieres saber más sobre mi, puedes descargar mi CV o contactarme."
     ],
     cv: "Descargar CV",
