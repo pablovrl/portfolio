@@ -1,5 +1,6 @@
 ---
 import { MenuIcon } from "astro-navbar";
+import SectionLayout from "./SectionLayout.astro";
 interface Props {
   lang: "en" | "es";
 }
@@ -23,38 +24,40 @@ const menuitems = [
 ---
 
 <div class="top-0 w-full sticky px-0">
-  <nav class="flex items-center py-2 gap-8 bg-white justify-between">
-    <a href="/" class="font-sans font-bold text-xl">PABLO VILLARROEL</a>
-    <ul class="md:flex gap-12 hidden">
-      {
-        menuitems.map((item) => (
-          <li class="cursor-pointer text-lg font-bold py-2">
-            {item.title.toUpperCase()}
-          </li>
-        ))
-      }
-      <select class="bg-white font-bold">
-        <option value="en" selected={lang === "en"}>EN 🇺🇸</option>
-        <option value="es" selected={lang === "es"}>ES 🇨🇱</option>
-      </select>
-    </ul>
-    <div id="menu-button" class="md:hidden">
-      <MenuIcon />
+  <SectionLayout>
+    <nav class="flex items-center py-2 gap-8 bg-white justify-between">
+      <a href="/" class="font-sans font-bold text-xl">PABLO VILLARROEL</a>
+      <ul class="md:flex gap-12 hidden">
+        {
+          menuitems.map((item) => (
+            <li class="cursor-pointer text-lg font-bold py-2">
+              {item.title.toUpperCase()}
+            </li>
+          ))
+        }
+        <select class="bg-white font-bold">
+          <option value="en" selected={lang === "en"}>EN 🇺🇸</option>
+          <option value="es" selected={lang === "es"}>ES 🇨🇱</option>
+        </select>
+      </ul>
+      <div id="menu-button" class="md:hidden">
+        <MenuIcon />
+      </div>
+    </nav>
+    <div id="dropdown" class="bg-white hidden w-full">
+      <ul class="pb-4 flex flex-col gap-3">
+        {
+          menuitems.map((item) => (
+            <li class="text-lg font-bold py-2">{item.title.toUpperCase()}</li>
+          ))
+        }
+        <select>
+          <option value="en" selected={lang === "en"}>EN 🇺🇸</option>
+          <option value="es" selected={lang === "es"}>ES 🇨🇱</option>
+        </select>
+      </ul>
     </div>
-  </nav>
-  <div id="dropdown" class="bg-white hidden w-full">
-    <ul class="pb-4 flex flex-col gap-3">
-      {
-        menuitems.map((item) => (
-          <li class="text-lg font-bold py-2">{item.title.toUpperCase()}</li>
-        ))
-      }
-      <select>
-        <option value="en" selected={lang === "en"}>EN 🇺🇸</option>
-        <option value="es" selected={lang === "es"}>ES 🇨🇱</option>
-      </select>
-    </ul>
-  </div>
+  </SectionLayout>
 </div>
 
 <script>
