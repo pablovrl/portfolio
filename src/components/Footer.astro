@@ -3,20 +3,92 @@ import IconLink from "./IconLink.astro";
 import { CONTACTS } from "../data";
 ---
 
-<footer
-  class="bg-black w-full h-44 flex gap-2 justify-center items-center mt-10 flex-col"
->
-  <p class="text-white">Created by Pablo Villarroel :)</p>
-  <div class="flex gap-2">
-    {
-      CONTACTS.map((contact) => (
-        <IconLink
-          href={contact.url}
-          icon={contact.icon}
-          color="white"
-          size="h-4"
-        />
-      ))
-    }
-  </div>
-</footer>
+<div>
+  <svg
+    _ngcontent-eoo-c26=""
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 0 1920 166"
+    fill="currentColor"
+    style="color: black;"
+    ><defs _ngcontent-eoo-c26=""
+      ><clipPath _ngcontent-eoo-c26="" id="clip-path"
+        ><rect
+          _ngcontent-eoo-c26=""
+          id="Rectángulo_636"
+          data-name="Rectángulo 636"
+          width="1920"
+          height="166"
+          transform="translate(0 6950)"></rect></clipPath
+      ><clipPath _ngcontent-eoo-c26="" id="clip-path-2"
+        ><rect
+          _ngcontent-eoo-c26=""
+          id="Rectángulo_388"
+          data-name="Rectángulo 388"
+          width="1920"
+          height="739"
+          transform="translate(-0.492 6891)"
+          stroke="#707070"
+          stroke-width="1"></rect></clipPath
+      ><clipPath _ngcontent-eoo-c26="" id="clip-path-3"
+        ><rect
+          _ngcontent-eoo-c26=""
+          id="Rectángulo_166"
+          data-name="Rectángulo 166"
+          width="6328.951"
+          height="652.041"></rect></clipPath
+      ></defs
+    ><g
+      _ngcontent-eoo-c26=""
+      id="Enmascarar_grupo_26"
+      data-name="Enmascarar grupo 26"
+      transform="translate(0 -6950)"
+      clip-path="url(#clip-path)"
+      ><g
+        _ngcontent-eoo-c26=""
+        id="Enmascarar_grupo_10"
+        data-name="Enmascarar grupo 10"
+        transform="translate(0.492)"
+        clip-path="url(#clip-path-2)"
+        ><g
+          _ngcontent-eoo-c26=""
+          id="Grupo_53"
+          data-name="Grupo 53"
+          transform="translate(-2807.831 6890.59)"
+          ><g
+            _ngcontent-eoo-c26=""
+            id="Grupo_52"
+            data-name="Grupo 52"
+            transform="translate(0 0)"
+            clip-path="url(#clip-path-3)"
+            ><path
+              _ngcontent-eoo-c26=""
+              id="Trazado_60"
+              data-name="Trazado 60"
+              d="M4927.708,2.894c-307.765,0-307.765,134.891-615.507,134.891S4004.46,2.894,3696.717,2.894c-307.765,0-307.765,134.891-615.507,134.891-307.765,0-307.765-134.891-615.507-134.891S2157.961,137.785,1850.2,137.785c-307.742,0-307.742-134.891-615.484-134.891S926.97,137.785,619.228,137.785C311.463,137.785,311.463,2.894,3.721,2.894v574.72H6158.7V2.894c-307.744,0-307.744,134.891-615.509,134.891-307.741,0-307.741-134.891-615.483-134.891"
+              transform="translate(83.254 64.753)"></path></g
+          ></g
+        ></g
+      ></g
+    ></svg
+  >
+  <footer
+    class="bg-black w-full h-40 flex gap-2 justify-center lg:justify-start items-center flex-col"
+  >
+    <p class="text-white text-xl font-semibold">
+      Created by Pablo Villarroel :)
+    </p>
+    <div class="flex gap-2">
+      {
+        CONTACTS.map((contact) => (
+          <IconLink
+            href={contact.url}
+            icon={contact.icon}
+            color="white"
+            size="h-4"
+          />
+        ))
+      }
+    </div>
+  </footer>
+</div>
