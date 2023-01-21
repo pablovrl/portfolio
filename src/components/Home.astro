@@ -1,0 +1,40 @@
+---
+import { PAGECONTENT } from "../data";
+import SectionLayout from "./SectionLayout.astro";
+interface Props {
+  lang: "en" | "es";
+}
+
+const { lang } = Astro.props;
+---
+
+<SectionLayout>
+  <div class="flex flex-col lg:flex-row w-full justify-between gap-10 lg:gap-0">
+    <section id="home" class="flex gap-5 flex-col md:max-w-4xl">
+      <div class="max-w-3xl flex">
+        <h1
+          class="py-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-4xl md:text-6xl font-bold"
+        >
+          {PAGECONTENT[lang].title}
+        </h1>
+      </div>
+      {
+        PAGECONTENT[lang].description.map((paragraph) => (
+          <p class="max-w-3xl text-xl">{paragraph}</p>
+        ))
+      }
+      <div class="flex gap-3 items-center">
+        <a
+          class="hover:-translate-y-1 hover:shadow-2xl bg-black text-white py-2 px-6 rounded-md transition-all"
+          target="_blank"
+          href={"https://docs.google.com/document/d/1xa9UIY9VXdLW8a-D5NGnUd-NSonwUVlNbnpOmSzTOt4/edit?usp=share_link"}
+        >
+          {PAGECONTENT[lang].cv}
+        </a>
+      </div>
+    </section>
+    <div class="flex items-center">
+      <img src="/profile.jpeg" width="250px" class="mx-4 rounded-full" />
+    </div>
+  </div>
+</SectionLayout>
