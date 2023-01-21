@@ -92,7 +92,7 @@ export const PAGECONTENT = {
   es: {
     title: "Ingeniero Informático. Creando aplicaciones web.",
     description: [
-      "Hola, mi nombre es Pablo Villarroel, soy Ingeniero en Informática y vivo en Concepción, Chile. Comencé mi carrera en 2019, y desde entonces, he estado aprendiendo desarrollo web de forma autodidacta. Me encantan los desafíos y siempre estoy buscando nuevas oportunidades para aprender y mejorar mis habilidades",
+      "Hola, mi nombre es Pablo Villarroel, soy Ingeniero en Informática y vivo en Concepción, Chile. Comencé mi carrera en 2019, y desde entonces, he estado aprendiendo desarrollo web de forma autodidacta. Me encantan los desafíos y siempre estoy buscando nuevas oportunidades para aprender y mejorar mis habilidades.",
       "Si quieres saber más sobre mi, puedes descargar mi CV o contactarme."
     ],
     cv: "Descargar CV",
