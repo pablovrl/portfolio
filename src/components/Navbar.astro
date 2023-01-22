@@ -72,7 +72,12 @@ const menuitems = [
 
   function scrollToElement(element: string) {
     const el = document.getElementById(element.trim());
-    el?.scrollIntoView({ behavior: "smooth" });
+    const position = el?.getBoundingClientRect();
+    window.scrollTo({
+      behavior: "smooth",
+      left: position!.left,
+      top: position!.top + window.scrollY - 100,
+    });
   }
 
   const menuItems = document.querySelectorAll("li");
