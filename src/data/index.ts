@@ -43,6 +43,7 @@ export const PROJECTS: Project[] = [
       es: "API desarrollada con Nestjs. Es el back-end de una tienda. Tiene un sistema de usuarios, productos, categorías, carritos y autenticación con JWT. Actualmente en desarrollo."
     },
     codeUrl: "https://github.com/pablovrl/nestjs-store-api",
+    demoUrl: "https://nestjs-store-api-production.up.railway.app/api"
   },
   {
     title: "Mi Portafolio UBB",
