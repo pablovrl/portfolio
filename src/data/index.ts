@@ -36,6 +36,15 @@ interface Project {
 // image size 1300 x 1000
 export const PROJECTS: Project[] = [
   {
+    title: "Nestjs API Store",
+    image: "api-store.png",
+    description: {
+      en: "API developed with Nestjs. It's the back-end of a store. It has a user system, products, categories, carts and JWT authentication. Currently in development.",
+      es: "API desarrollada con Nestjs. Es el back-end de una tienda. Tiene un sistema de usuarios, productos, categorías, carritos y autenticación con JWT. Actualmente en desarrollo."
+    },
+    codeUrl: "https://github.com/pablovrl/nestjs-store-api",
+  },
+  {
     title: "Mi Portafolio UBB",
     image: "mi-portafolio-ubb.png",
     description: {
@@ -43,7 +52,6 @@ export const PROJECTS: Project[] = [
       es: "Sitio web para los estudiantes de Ingeniería en Informática de la Universidad de Bío-Bío. En el cual pueden crear y compartir un portafolio digital. También los empleadores pueden buscar estudiantes por sus habilidades y contactarlos."
     },
     codeUrl: "https://github.com/pablovrl/mi-portafolio-ubb",
-    demoUrl: undefined,
   },
   {
     title: "Auth App",
@@ -53,7 +61,6 @@ export const PROJECTS: Project[] = [
       es: "Aplicación web creada para aprender como funciona la autenticación (usando cookies) y las rutas protegidas."
     },
     codeUrl: "https://github.com/pablovrl/auth-app",
-    demoUrl: undefined,
   },
   {
     title: "Pokemon Card",
@@ -73,7 +80,6 @@ export const PROJECTS: Project[] = [
       es: "Prueba técnica para entrar como interno en Docmovi. Usando un framework de back-end y front-end llamado Meteor."
     },
     codeUrl: "https://github.com/pablovrl/prueba-docmovi",
-    demoUrl: undefined,
   },
 ];
 
