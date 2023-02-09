@@ -9,15 +9,24 @@ const { lang } = Astro.props;
 
 const menuitems = [
   {
-    title: "Home",
+    title: {
+      en: "Home",
+      es: "Inicio",
+    },
     path: "#",
   },
   {
-    title: "Projects",
+    title: {
+      en: "Projects",
+      es: "Proyectos",
+    },
     path: "#",
   },
   {
-    title: "Contact",
+    title: {
+      en: "Contact",
+      es: "Contacto",
+    },
     path: "#",
   },
 ];
@@ -30,8 +39,8 @@ const menuitems = [
       <ul class="md:flex gap-12 hidden">
         {
           menuitems.map((item) => (
-            <li class="cursor-pointer text-lg font-bold py-2">
-              {item.title.toUpperCase()}
+            <li id={item.title.en} class="cursor-pointer text-lg font-bold py-2">
+              {item.title[lang].toUpperCase()}
             </li>
           ))
         }
@@ -48,7 +57,7 @@ const menuitems = [
       <ul class="pb-4 flex flex-col gap-3">
         {
           menuitems.map((item) => (
-            <li class="text-lg font-bold py-2">{item.title.toUpperCase()}</li>
+            <li class="text-lg font-bold py-2">{item.title[lang].toUpperCase()}</li>
           ))
         }
         <select>
@@ -83,7 +92,7 @@ const menuitems = [
   const menuItems = document.querySelectorAll("li");
   menuItems.forEach((item) => {
     item.addEventListener("click", () => {
-      const element = item.textContent?.toLowerCase();
+      const element = item.id?.toLowerCase();
       scrollToElement(element!);
     });
   });
