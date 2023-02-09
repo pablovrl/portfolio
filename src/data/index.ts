@@ -57,15 +57,6 @@ export const PROJECTS: Project[] = [
     codeUrl: "https://github.com/pablovrl/mi-portafolio-ubb",
   },
   {
-    title: "Auth App",
-    image: "auth-app.png",
-    description: {
-      en: "Web application created to learn how authentication (using cookies) and protected routes works.",
-      es: "Aplicación web creada para aprender como funciona la autenticación (usando cookies) y las rutas protegidas."
-    },
-    codeUrl: "https://github.com/pablovrl/auth-app",
-  },
-  {
     title: "Pokemon Card",
     image: "pokemon-card.png",
     description: {
@@ -74,15 +65,6 @@ export const PROJECTS: Project[] = [
     },
     codeUrl: "https://github.com/pablovrl/pokemon-card",
     demoUrl: "https://pokemon-card-ten.vercel.app/"
-  },
-  {
-    title: "Docmovi's technical test",
-    image: "docmovi.jpeg",
-    description: {
-      en: "Technical test to enter as an intern at Docmovi. Using a back-end and front-end framework called Meteor.",
-      es: "Prueba técnica para entrar como interno en Docmovi. Usando un framework de back-end y front-end llamado Meteor."
-    },
-    codeUrl: "https://github.com/pablovrl/prueba-docmovi",
   },
 ];
 
