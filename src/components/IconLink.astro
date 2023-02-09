@@ -11,7 +11,12 @@ interface Props {
 const { href, icon, color, size } = Astro.props;
 ---
 
-<a class="text-black" href={href} target="_blank">
+<a
+  class="text-black"
+  href={href}
+  target="_blank"
+  aria-label={`Go to Pablo's ${icon}`}
+>
   <Icon
     class={`${size || "h-6"} text-${color}`}
     name={`simple-icons:${icon}`}

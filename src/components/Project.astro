@@ -20,7 +20,11 @@ const { title, image, codeUrl, demoUrl, description, wip } = Astro.props;
     )
   }
   <div class="max-h-80 border-t border-l border-r rounded-t-lg">
-    <img src={image} class="rounded-t-lg object-fill" />
+    <img
+      src={image}
+      class="rounded-t-lg object-fill"
+      alt={`Image that show the first page of the ${title} project`}
+    />
   </div>
   <div
     class="bg-white border rounded-b-lg px-4 py-6 flex flex-col gap-4 justify-between h-full"
@@ -39,7 +43,7 @@ const { title, image, codeUrl, demoUrl, description, wip } = Astro.props;
       >
         Code
       </a>
-      <a target="_blank" class="" href={demoUrl}>
+      <a target="_blank" class="" href={demoUrl || '/'}>
         <button
           disabled={!demoUrl}
           class="hover:-translate-y-1 disabled:hover:translate-y-0 hover:shadow-2xl disabled:shadow-none transition-all h-full w-full border-2 border-black rounded-md disabled:bg-gray-100 disabled:text-gray-300 disabled:border-gray-100"
