@@ -22,7 +22,7 @@ export const CONTACTS = [
   }
 ];
 
-interface Project {
+export interface Project {
   title: string;
   image: string;
   description: {
@@ -31,6 +31,7 @@ interface Project {
   };
   codeUrl: string;
   demoUrl?: string;
+  wip?: boolean;
 }
 
 // image size 1300 x 1000
@@ -43,7 +44,8 @@ export const PROJECTS: Project[] = [
       es: "API desarrollada con Nestjs. Es el back-end de una tienda. Tiene un sistema de usuarios, productos, categorías, carritos y autenticación con JWT. Actualmente en desarrollo."
     },
     codeUrl: "https://github.com/pablovrl/nestjs-store-api",
-    demoUrl: "https://nestjs-store-api-production.up.railway.app/api"
+    demoUrl: "https://nestjs-store-api-production.up.railway.app/api",
+    wip: true
   },
   {
     title: "Mi Portafolio UBB",

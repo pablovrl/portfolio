@@ -5,12 +5,20 @@ interface Props {
   codeUrl: string;
   image: string;
   description: string;
+  wip?: boolean;
 }
 
-const { title, image, codeUrl, demoUrl, description } = Astro.props;
+const { title, image, codeUrl, demoUrl, description, wip } = Astro.props;
 ---
 
-<div class="flex flex-col">
+<div class="flex flex-col relative">
+  {
+    wip && (
+      <div class="font-bold absolute bg-purple-200 -right-3 -top-3 p-2 px-3 rounded-full">
+        <span>WIP</span>
+      </div>
+    )
+  }
   <div class="max-h-80 border-t border-l border-r rounded-t-lg">
     <img src={image} class="rounded-t-lg object-fill" />
   </div>
