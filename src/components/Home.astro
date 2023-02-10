@@ -13,7 +13,7 @@ const { lang } = Astro.props;
     <section id="home" class="flex gap-5 flex-col md:max-w-4xl">
       <div class="max-w-3xl flex">
         <h1
-          class="py-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-4xl md:text-6xl font-bold"
+          class="text-animation py-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-4xl md:text-6xl font-bold"
         >
           {PAGECONTENT[lang].title}
         </h1>
@@ -34,7 +34,40 @@ const { lang } = Astro.props;
       </div>
     </section>
     <div class="flex items-center">
-      <img src="/profile.jpeg" width="250px" class="mx-4 rounded-full" alt="Pablo's profile photo" />
+      <img
+        src="/profile.jpeg"
+        width="250px"
+        class="mx-4 rounded-full"
+        alt="Pablo's profile photo"
+      />
     </div>
   </div>
 </SectionLayout>
+
+<style>
+  .text-animation {
+    --bg-size: 400%;
+    --color-one: #c084fc;
+    --color-two: #db2777;
+    background: linear-gradient(
+        90deg,
+        var(--color-one),
+        var(--color-two),
+        var(--color-one)
+      )
+      0 0 / var(--bg-size) 100%;
+    color: transparent;
+    background-clip: text;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .text-animation {
+      animation: move-bg 15s linear infinite;
+    }
+    @keyframes move-bg {
+      to {
+        background-position: var(--bg-size) 0;
+      }
+    }
+  }
+</style>
