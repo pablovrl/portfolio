@@ -25,7 +25,7 @@ const { lang } = Astro.props;
       }
       <div class="flex gap-3 items-center">
         <a
-          class="hover:-translate-y-1 hover:shadow-2xl bg-black text-white py-2 px-6 rounded-md transition-all"
+          class="hover:-translate-y-1 hover:shadow-2xl border-2 border-black bg-black text-white py-2 px-6 rounded-md transition-all"
           target="_blank"
           href={"https://drive.google.com/file/d/131a_RjyuoJ06f-o_TLgl86uSXvILZrJj/view?usp=share_link"}
         >
@@ -35,7 +35,7 @@ const { lang } = Astro.props;
           id="go-to-contact"
           class="hover:-translate-y-1 hover:cursor-pointer hover:shadow-2xl bg-white text-black border-2 border-black py-2 px-6 rounded-md transition-all"
         >
-          Contact me
+          {PAGECONTENT[lang].contact}
         </a>
       </div>
     </section>

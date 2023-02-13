@@ -80,6 +80,7 @@ export const PAGECONTENT = {
       "If you want to know more about me, you can download my CV or contact me."
     ],
     cv: "Download CV",
+    contact: "Contact me",
     projectsTitle: "Some projects I've developed",
     contactSubtitle: "Contact Information",
     contactTitle: "Let's talk, send me a message"
@@ -91,6 +92,7 @@ export const PAGECONTENT = {
       "Si quieres saber más sobre mi, puedes descargar mi CV o contactarme."
     ],
     cv: "Descargar CV",
+    contact: "Contáctame",
     projectsTitle: "Algunos proyectos que he desarrollado",
     contactSubtitle: "Información de contacto",
     contactTitle: "Hablemos, envíame un mensaje"
