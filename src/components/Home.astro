@@ -32,9 +32,8 @@ const { lang } = Astro.props;
           {PAGECONTENT[lang].cv}
         </a>
         <a
-          class="hover:-translate-y-1 hover:shadow-2xl bg-white text-black border border-black py-2 px-6 rounded-md transition-all"
-          target="_blank"
-          href={"https://drive.google.com/file/d/131a_RjyuoJ06f-o_TLgl86uSXvILZrJj/view?usp=share_link"}
+          id="go-to-contact"
+          class="hover:-translate-y-1 hover:cursor-pointer hover:shadow-2xl bg-white text-black border-2 border-black py-2 px-6 rounded-md transition-all"
         >
           Contact me
         </a>
@@ -78,3 +77,11 @@ const { lang } = Astro.props;
     }
   }
 </style>
+
+<script>
+  import { scrollToElement } from "../utils/scroll-to-element";
+  const goToContact = document.getElementById('go-to-contact');
+  goToContact?.addEventListener('click', () => {
+    scrollToElement('contact');
+  });
+</script>
