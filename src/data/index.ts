@@ -32,7 +32,6 @@ export interface Project {
   codeUrl: string;
   demoUrl?: string;
   wip?: boolean;
-  technologies: string[];
 }
 
 // image size 1300 x 1000
@@ -47,7 +46,6 @@ export const PROJECTS: Project[] = [
     codeUrl: "https://github.com/pablovrl/nestjs-store-api",
     demoUrl: "https://nestjs-store-api-production.up.railway.app/api",
     wip: true,
-    technologies: ["TypeScript", "NestJS", "JWT", "Prisma", "Role Authorization", "Docker", "PostgreSQL"]
   },
   {
     title: "Mi Portafolio UBB",
@@ -57,7 +55,6 @@ export const PROJECTS: Project[] = [
       es: "Sitio web para los estudiantes de Ingeniería en Informática de la Universidad de Bío-Bío. En el cual pueden crear y compartir un portafolio digital. También los empleadores pueden buscar estudiantes por sus habilidades y contactarlos."
     },
     codeUrl: "https://github.com/pablovrl/mi-portafolio-ubb",
-    technologies: ['TypeScript', 'Next.js', 'E2E Testing', 'Prisma', 'NextAuth', "Material-UI"]
   },
 ];
 

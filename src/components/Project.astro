@@ -6,7 +6,6 @@ interface Props {
   image: string;
   description: string;
   wip?: boolean;
-  technologies: string[];
 }
 
 const { title, image, codeUrl, demoUrl, description, wip, technologies } = Astro.props;
@@ -36,15 +35,6 @@ const { title, image, codeUrl, demoUrl, description, wip, technologies } = Astro
       <p>
         {description}
       </p>
-      <div class="flex flex-wrap gap-2">
-        {
-          technologies.map((technology) => (
-            <span class="bg-gray-100 text-gray-500 text-xs rounded-full px-3 py-1 inline-block">
-              {technology} 
-            </span>
-          ))
-        }
-      </div>
     </div>
     <div class="grid grid-cols-2 gap-2">
       <a
