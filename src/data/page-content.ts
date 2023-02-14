@@ -23,4 +23,4 @@ export const PAGECONTENT = {
     contactSubtitle: "Información de contacto",
     contactTitle: "Hablemos, envíame un mensaje"
   }
-}
+};
