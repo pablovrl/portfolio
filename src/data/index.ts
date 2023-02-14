@@ -59,17 +59,6 @@ export const PROJECTS: Project[] = [
     codeUrl: "https://github.com/pablovrl/mi-portafolio-ubb",
     technologies: ['TypeScript', 'Next.js', 'E2E Testing', 'Prisma', 'NextAuth', "Material-UI"]
   },
-  {
-    title: "Pokemon Card",
-    image: "pokemon-card.png",
-    description: {
-      en: "Web application created to learn how to use the PokeAPI and tailwindcss. It shows a random pokemon card. Also, you add cards to your favorites list.",
-      es: "Aplicación web creada para aprender como usar la PokeAPI y tailwindcss. Muestra una carta de pokemon aleatoria. Además, puedes agregar cartas a tu lista de favoritos."
-    },
-    codeUrl: "https://github.com/pablovrl/pokemon-card",
-    demoUrl: "https://pokemon-card-ten.vercel.app/",
-    technologies: ["TypeScript", "React", "TailwindCSS", "PokeAPI"]
-  },
 ];
 
 export const PAGECONTENT = {
