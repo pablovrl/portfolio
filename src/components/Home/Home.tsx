@@ -1,7 +1,7 @@
-import { CVLINK, PAGECONTENT } from "../data";
-import { SectionLayout } from "./layout/SectionLayout";
-import profilePicture from "../assets/profile.png";
-import { Anchor } from "./Anchor";
+import { CVLINK, PAGECONTENT } from "../../data";
+import { SectionLayout } from "../layout/SectionLayout";
+import profilePicture from "../../assets/profile.png";
+import { Anchor } from "../Anchor";
 
 export function Home() {
   return (
