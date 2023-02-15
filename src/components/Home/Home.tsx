@@ -9,7 +9,7 @@ export function Home() {
       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
         <div className="max-w-3xl">
           <header>
-            <h1 className="text-6xl font-bold mb-8">{PAGECONTENT.en.title}</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-8">{PAGECONTENT.en.title}</h1>
           </header>
           <div className="flex flex-col gap-4">
             {PAGECONTENT.en.description.map((paragraph, index) => (

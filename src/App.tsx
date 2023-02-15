@@ -1,9 +1,13 @@
 import { Home } from "./components/Home";
+import { Navbar } from "./components/Navbar";
 
 function App() {
   return (
-    <div className="mx-4">
-      <Home />
+    <div>
+      <Navbar />
+      <div className="px-4 pt-20">
+        <Home />
+      </div>
     </div>
   );
 }
