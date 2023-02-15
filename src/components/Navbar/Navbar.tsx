@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { scrollToElement } from "../../utils";
 
 const MENU_ITEMS = [
   {
@@ -6,18 +7,21 @@ const MENU_ITEMS = [
       en: "Home",
       es: "Inicio",
     },
+    elementToScrollId: "home",
   },
   {
     label: {
       en: "Projects",
       es: "Proyectos",
     },
+    elementToScrollId: "projects",
   },
   {
     label: {
       en: "Contact",
       es: "Contacto",
     },
+    elementToScrollId: "contact",
   },
 ];
 
@@ -27,8 +31,9 @@ export function Navbar() {
   const toggleSelectIsOpen = () => setSelectIsOpen(!selectIsOpen);
   const closeSelectIsOpen = () => setSelectIsOpen(false);
 
-  const handleListClick = () => {
+  const handleListClick = (element: string) => {
     if (selectIsOpen) closeSelectIsOpen();
+    scrollToElement(element);
   };
 
   return (
@@ -40,7 +45,7 @@ export function Navbar() {
             <li
               key={item.label.en}
               className="px-2 cursor-pointer hover:bg-black hover:text-white transition-colors duration-500"
-              onClick={handleListClick}
+              onClick={() => handleListClick(item.elementToScrollId)}
             >
               {item.label.en.toUpperCase()}
             </li>
@@ -54,7 +59,7 @@ export function Navbar() {
         <ul className="gap-6 flex flex-col pb-4">
           {MENU_ITEMS.map((item) => (
             <li
-              onClick={handleListClick}
+              onClick={() => handleListClick(item.elementToScrollId)}
               key={item.label.en}
               className="font-bold"
             >

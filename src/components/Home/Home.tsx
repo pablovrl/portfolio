@@ -5,7 +5,7 @@ import { Anchor } from "../Anchor";
 
 export function Home() {
   return (
-    <SectionLayout>
+    <SectionLayout id="home">
       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
         <div className="max-w-3xl">
           <header>
