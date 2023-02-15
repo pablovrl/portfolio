@@ -21,3 +21,5 @@ export const CONTACTS = [
     color: "bg-purple-100"
   }
 ];
+
+export const CVLINK = "https://drive.google.com/file/d/131a_RjyuoJ06f-o_TLgl86uSXvILZrJj/view?usp=share_link";
