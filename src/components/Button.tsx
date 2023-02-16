@@ -1,20 +1,18 @@
-interface AnchorProps {
-  href?: string;
+interface ButtonProps {
   children?: string;
   color: "primary" | "secondary";
-  blank?: boolean;
   fullWidth?: boolean;
   disabled?: boolean;
+  onClick?: () => void;
 }
 
-export function Anchor({
-  href,
+export function Button({
   children,
   color,
-  blank,
   fullWidth,
   disabled,
-}: AnchorProps) {
+  onClick,
+}: ButtonProps) {
   const colorSchema =
     color === "primary" ? "bg-black text-white" : "bg-white text-black";
   const width = fullWidth ? "w-full" : "w-40";
@@ -23,12 +21,11 @@ export function Anchor({
     : "border-black inline-block cursor-pointer hover:-translate-y-1 hover:shadow-2xl transition-all";
 
   return (
-    <a
-      target={blank ? "_blank" : ""}
-      href={href}
+    <button
+      onClick={onClick}
       className={`${colorSchema} ${width} ${style} border-2 py-2 text-center rounded-md`}
     >
       {children}
-    </a>
+    </button>
   );
 }
