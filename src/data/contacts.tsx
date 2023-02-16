@@ -6,21 +6,21 @@ export const CONTACTS = [
     url: "mailto:pablovillarroel135@gmail.com",
     user: "pablovillarroel135@gmail.com",
     color: "bg-yellow-100",
-    icon: <SiGmail color="white" />,
+    icon: <SiGmail />,
   },
   {
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/pablo-villarroel-antillanca-850974186/",
     user: "Pablo Villarroel Antillanca",
     color: "bg-pink-100",
-    icon: <SiLinkedin color="white" />,
+    icon: <SiLinkedin />,
   },
   {
     name: "GitHub",
     url: "https://github.com/pablovrl",
     user: "@pablovrl",
     color: "bg-purple-100",
-    icon: <SiGithub color="white" />,
+    icon: <SiGithub  />,
   },
 ];
 
