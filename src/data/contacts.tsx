@@ -1,25 +1,28 @@
+import { SiLinkedin, SiGmail, SiGithub } from "react-icons/si";
+
 export const CONTACTS = [
   {
     name: "Mail",
     url: "mailto:pablovillarroel135@gmail.com",
-    icon: "gmail",
     user: "pablovillarroel135@gmail.com",
-    color: "bg-yellow-100"
+    color: "bg-yellow-100",
+    icon: <SiGmail color="white" />,
   },
   {
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/pablo-villarroel-antillanca-850974186/",
-    icon: "linkedin",
     user: "Pablo Villarroel Antillanca",
-    color: "bg-pink-100"
+    color: "bg-pink-100",
+    icon: <SiLinkedin color="white" />,
   },
   {
     name: "GitHub",
     url: "https://github.com/pablovrl",
-    icon: "github",
     user: "@pablovrl",
-    color: "bg-purple-100"
-  }
+    color: "bg-purple-100",
+    icon: <SiGithub color="white" />,
+  },
 ];
 
-export const CVLINK = "https://drive.google.com/file/d/131a_RjyuoJ06f-o_TLgl86uSXvILZrJj/view?usp=share_link";
+export const CVLINK =
+  "https://drive.google.com/file/d/131a_RjyuoJ06f-o_TLgl86uSXvILZrJj/view?usp=share_link";

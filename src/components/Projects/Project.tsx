@@ -15,10 +15,10 @@ export function Project({ project }: ProjectProps) {
           <p>{project.description.en}</p>
         </div>
         <div className="flex justify-between gap-4">
-          <Anchor href={project.codeUrl} color="primary" fullWidth>
+          <Anchor blank href={project.codeUrl} color="primary" fullWidth>
             Code
           </Anchor>
-          <Anchor disabled={true} href={project.demoUrl} color="secondary" fullWidth>
+          <Anchor blank disabled={!project.demoUrl} href={project.demoUrl} color="secondary" fullWidth>
             Demo
           </Anchor>
         </div>
