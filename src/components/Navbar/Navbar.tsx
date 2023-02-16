@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { scrollToElement } from "../../utils";
+import { BiMenu } from "react-icons/bi";
 
 const MENU_ITEMS = [
   {
@@ -38,7 +39,7 @@ export function Navbar() {
 
   return (
     <div className="fixed bg-white w-full">
-      <nav className="flex justify-between text-lg font-bold py-4 max-w-6xl px-4 xl:m-auto xl:px-0 ">
+      <nav className="flex items-center justify-between text-lg font-bold py-4 max-w-6xl px-4 xl:m-auto xl:px-0 ">
         <span>PABLO VILLARROEL</span>
         <ul className="gap-6 hidden md:flex">
           {MENU_ITEMS.map((item) => (
@@ -51,12 +52,12 @@ export function Navbar() {
             </li>
           ))}
         </ul>
-        <button onClick={toggleSelectIsOpen} className="md:hidden">
-          click me
+        <button onClick={toggleSelectIsOpen} className="md:hidden text-3xl">
+          <BiMenu />
         </button>
       </nav>
       {selectIsOpen ? (
-        <ul className="gap-6 flex flex-col pb-4">
+        <ul className="gap-6 flex flex-col pb-4 px-4">
           {MENU_ITEMS.map((item) => (
             <li
               onClick={() => handleListClick(item.elementToScrollId)}
