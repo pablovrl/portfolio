@@ -37,8 +37,8 @@ export function Navbar() {
   };
 
   return (
-    <div className="fixed bg-white w-full px-4">
-      <nav className="flex justify-between text-lg font-bold py-4 max-w-6xl m-auto">
+    <div className="fixed bg-white w-full">
+      <nav className="flex justify-between text-lg font-bold py-4 max-w-6xl px-4 xl:m-auto xl:px-0 ">
         <span>PABLO VILLARROEL</span>
         <ul className="gap-6 hidden md:flex">
           {MENU_ITEMS.map((item) => (

@@ -5,7 +5,7 @@ interface SectionLayoutProps {
 
 export function SectionLayout({ children, id }: SectionLayoutProps) {
   return (
-    <section id={id} className="lg:max-w-6xl lg:mx-auto w-full px-4">
+    <section id={id} className="lg:max-w-6xl xl:mx-auto w-full px-4 xl:px-0">
       {children}
     </section>
   );

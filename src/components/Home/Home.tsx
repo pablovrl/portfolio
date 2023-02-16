@@ -11,7 +11,7 @@ export function Home() {
       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
         <div className="max-w-3xl">
           <header>
-            <h1 className="text-5xl md:text-6xl font-bold mb-8">
+            <h1 className="pb-4 animate-text bg-gradient-to-l from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent text-5xl md:text-6xl font-bold">
               {PAGECONTENT.en.title}
             </h1>
           </header>
