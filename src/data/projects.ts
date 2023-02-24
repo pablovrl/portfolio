@@ -8,7 +8,7 @@ export const PROJECTS: Project[] = [
     title: "Pixel Me",
     image: pixelMeImage,
     description: {
-      en: "Web app to pixelate selected areas of an image. It usses the cloudinary API to upload and process the images.",
+      en: "Web app to pixelate selected areas of an image. It uses the cloudinary API to upload and process the images.",
       es: "Aplicación web para pixelar áreas seleccionadas de una imagen. Usa la API de cloudinary para subir y procesar las imágenes.",
     },
     codeUrl: "https://github.com/pablovrl/pixelme",
