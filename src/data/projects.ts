@@ -12,7 +12,7 @@ export const PROJECTS: Project[] = [
       es: "Aplicación web para pixelar áreas seleccionadas de una imagen. Usa la API de cloudinary para subir y procesar las imágenes.",
     },
     codeUrl: "https://github.com/pablovrl/pixelme",
-    demoUrl: "https://pixel-me.vercel.app/",
+    demoUrl: "https://pixelme-red.vercel.app/",
   },
   {
     title: "Nestjs API Store",
