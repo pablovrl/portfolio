@@ -5,7 +5,7 @@ export type Project = {
       en: string;
       es: string;
   };
-  codeUrl: string;
+  codeUrl?: string;
   demoUrl?: string;
   wip?: boolean;
 }
